@@ -3,22 +3,32 @@ The database design project aims at creating a comprehensive data definition lan
 
 
 DTSC660: Data and Database Management with SQL
+
 Module 6
+
 Assignment 4
+
 Purpose
+
 For this assignment, you will utilize the skills acquired in Modules 5 and 6 to design a database and write
 a series of complex queries. You will be responsible for testing your code before submission.
+
 Part 1: Database Design
+
 ● You have been asked to create a banking database for Eastern Banking Holdings. In this part,
 your objective is to create a comprehensive DDL for the banking database. You will employ
 methods such as defining primary and foreign keys, implementing various constraints, and
 ensuring data integrity.
+
 Part 2: Queries Using the Banking Database
+
 ● In this part, you will populate your banking database with the provided data from the Assignment
 4 folder in Brightspace. Once the database is populated, you will be tasked with writing a series of
 complex queries. These queries will involve complex techniques such as JOINs, SET operators,
 and Subqueries.
+
 Part 3: Advanced Queries with the University Database
+
 ● For the final part of the assignment, you will utilize the university database from Module 5. Your
 objective is to write another series of advanced queries, incorporating the concepts and
 techniques covered in Modules 5.
