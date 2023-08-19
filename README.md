@@ -32,7 +32,9 @@ Part 3: Advanced Queries with the University Database
 ● For the final part of the assignment, you will utilize the university database from Module 5. Your
 objective is to write another series of advanced queries, incorporating the concepts and
 techniques covered in Modules 5.
+
 Submission
+
 You will submit a total of 3 sql files to CodeGrade. Files should be named appropriately and be in .sql
 format. Each file must use the postgres standards taught in the course. Use of other SQL languages such
 as T-SQL will result in an automatic 0 for the assignment. Ensure your files run in their entirety in
@@ -40,34 +42,52 @@ pgAdmin. This means ensuring each query ends in a semicolon ( ; ). Graders will 
 correct or interpret malformed SQL queries. You will have one submission attempt for this
 assignment. It is expected that if you have questions or difficulties with any portion of this assignment that
 you utilize the assignment discussion board or email the GAs to gain clarity (dtsc_ga_660@eastern.edu)
+
 ● File 1: You must submit a SQL document called <LastName>_Assignment4_Part1. This
 document must include ALL commands required to create the banking database (the DDL).
+
 ● File 2: You must submit a SQL document called <LastName>_Assignment4_Part2. This
 document must include Queries 1- 7 found in part 2 of this assignment.
+
 ● File 3: You must submit a SQL document called <LastName>_Assignment4_Part3. This
 document must include Queries 8-12 found in part 3 of this assignment.
+
 ● You will submit all files to the Assignment 4 Submission link to CodeGrade. Failure to include all
 three files will result in loss of credit for any missing information as specified in the rubric.
+
 PART 1 Banking Database Design
+
 Question 1:
+
 Consider the bank database schema given below. Write the SQL DDL corresponding to this
 schema (i.e. the CREATE TABLE statements). When you are writing the DDL, make sure you
 do the following:
+
 a. Create the tables in the order specified in the schema.
+
 b. Use the exact names given for table names and attributes.
+
 c. Do not add or remove tables or attributes.
+
 d. For each table, assumptions have been provided regarding the attributes and
 relationships between them. The purpose of your DDL is to meet the outlined
 requirements by utilizing constraints and keys for data validation. By defining the tables,
 specifying appropriate data types, and enforcing constraints and keys (both primary and
-foreign), you should ensure that these assumptions hold true..
+foreign), you should ensure that these assumptions hold true.
+
 e. In this database, only the data types varchar(40) and money will be used. Please
 ensure that attributes are defined with only these data types for consistency.
+
 f. By the time you have completed you will have at least one of each of the following:
+
 i. CHECK constraint
+
 ii. NOT NULL constraint
+
 iii. ON UPDATE CASCADE ON DELETE CASCADE
+
 iv. DEFAULT value constraint
+
 Database Schema:
 branch ( branch_name, branch_city, assets )
 customer ( cust_ID, customer_name, customer_street, customer_city )
