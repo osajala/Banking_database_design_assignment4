@@ -89,87 +89,108 @@ iii. ON UPDATE CASCADE ON DELETE CASCADE
 iv. DEFAULT value constraint
 
 Database Schema:
+
 branch ( branch_name, branch_city, assets )
+
 customer ( cust_ID, customer_name, customer_street, customer_city )
+
 loan ( loan_number, branch_name, amount )
+
 borrower ( cust_ID, loan_number )
+
 account ( account_number, branch_name, balance )
+
 depositor ( cust_ID, account_number )
+
 ** Bold indicates Foreign Key, Underlined indicates Primary Key
+
 ***************************ASSIGNMENT CONTINUED ON NEXT PAGE****************************
 Database Assumptions:
+
 ● A customer can have multiple accounts and/or multiple loans. Likewise, an account or
 loan can be tied to more than one customer (think spouses or business partners).
+
 ● For this example, it is assumed that there is only one bank, and all the individual
 branches listed in the data are owned by this bank
+
 Table Assumptions:
+
 ● Branch:
+
 ○ All branches must have assets that are monetary.
+
 ○ Asset amount cannot be negative
+
 ○ There are four and only four cities with branches: Brooklyn, Bronx, Manhattan,
 and Yonkers.
+
 ● Customer:
+
 ○ Customers must have a name.
+
 ○ Customers must have a street address (You may choose to include an additional
 CONSTRAINT for the city; however, please note that only the street address is a
 requirement.)
+
 ● Loan:
+
 ○ All loans must have a monetary amount.
+
 ○ The default amount for loans is zero dollars and zero cents.
+
 ○ A loan amount cannot be negative
-○ If a branch closes or changes its name, these activities should be reflected in the
-loan table.
+
+○ If a branch closes or changes its name, these activities should be reflected in the loan table.
+
 ● Borrower:
-○ A borrower is a type of customer, so if the cust_ID is deleted or changed, the
-borrower table should reflect these actions.
+
+○ A borrower is a type of customer, so if the cust_ID is deleted or changed, the borrower table should reflect these actions.
+
 ○ The same is true of the loan_number.
+
 ● Account:
+
 ○ All accounts must have a monetary amount.
+
 ○ The default amount for loans is zero dollars and zero cents.
-○ If a branch closes or changes its name, these activities should be reflected in the
-account table.
+
+○ If a branch closes or changes its name, these activities should be reflected in the account table.
+
 ● Depositor:
-○ A depositor is a type of customer, so if the cust_ID is deleted or changed, the
-depositor table should reflect these actions.
+
+○ A depositor is a type of customer, so if the cust_ID is deleted or changed, the depositor table should reflect these actions.
+
 ○ The same is true of the account_number.
+
 Note: Please remember that for this assignment, you should only use the data types varchar(40) and
 money for consistency purposes. While these data types might not be the absolute best choice in all
 cases, the goal here is to demonstrate your understanding of constraints, data validation, and keys. Data
 type declaration was already assessed in a prior assignment, and it is not the primary focus of this
 assignment. Therefore, choose the most appropriate data type between varchar(40) and money for each
 attribute to maintain consistency throughout the database design.
+
 ***************************ASSIGNMENT CONTINUED ON NEXT PAGE****************************
 PART 2 Banking Database Queries
-For the next section, you will need to use the SQL data file located in the Assignment 4 folder
-on Brightspace. You will use this data to populate the database you have created using your
-Banking DDL. If your queries do not run, you will need to go back and fix your Banking DDL.
-Make sure you use the correct table names and attributes. Queries that do not function correctly
+
+For the next section, you will need to use the SQL data file located in the Assignment 4 folder on Brightspace. You will use this data to populate the database you have created using your Banking DDL. If your queries do not run, you will need to go back and fix your Banking DDL. Make sure you use the correct table names and attributes. Queries that do not function correctly
 in the given database will result in point deductions.
-Important: Note that when a query request specifies the use of a JOIN, subquery, SET
-operator, or a combination of these techniques, you must ensure that your query incorporates
-the required method at least once. However, you are not limited to using only that technique,
-unless otherwise specified. Feel free to employ the required technique multiple times or
-combine it with other techniques to achieve the desired outcome. For example, if a question
-mandates the use of a join, you may opt to use multiple joins, a join with a subquery, or any
-other valid approach as long as the minimum requirement is met.
+
+Important: Note that when a query request specifies the use of a JOIN, subquery, SET operator, or a combination of these techniques, you must ensure that your query incorporates the required method at least once. However, you are not limited to using only that technique,
+unless otherwise specified. Feel free to employ the required technique multiple times or  combine it with other techniques to achieve the desired outcome. For example, if a question mandates the use of a join, you may opt to use multiple joins, a join with a subquery, or any other valid approach as long as the minimum requirement is met.
+
 Query 1:
-Write a query to find all customers who have at least one loan and one deposit account. Include
-the cust_ID, account_number, and loan_number in your results. Note: Some customers may
-appear multiple times due to having multiple loans or deposit accounts. Your solution must
-include a JOIN.
+
+Write a query to find all customers who have at least one loan and one deposit account. Include the cust_ID, account_number, and loan_number in your results. Note: Some customers may appear multiple times due to having multiple loans or deposit accounts. Your solution must include a JOIN.
+
 Query 2:
-Write a query that identifies all customers who have a deposit account in the same city in which
-they live. The results should include the cust_id, customer_city, branch_city, branch_name,
-and account_number. Note: The city of a deposit account is the city where its branch is
-located. Your solution must use a JOIN.
+
+Write a query that identifies all customers who have a deposit account in the same city in which they live. The results should include the cust_id, customer_city, branch_city, branch_name, and account_number. Note: The city of a deposit account is the city where its branch is located. Your solution must use a JOIN.
+
 Query 3:
-Write a query that returns the cust_ID and customer_name of customers who hold at least one
-loan with the bank, but do not have any deposit accounts. Your solution must use a subquery
-and a SET operator.
+
+Write a query that returns the cust_ID and customer_name of customers who hold at least one loan with the bank, but do not have any deposit accounts. Your solution must use a subquery and a SET operator.
+
 Query 4:
-Write a query to obtain the cust_ID and customer_name for all customers residing on the
-same street and in the same city as customer '12345'. Include customer '12345' in the results.
-Avoid hardcoding the address for customer '12345' as their information might change. Your
-solution must include a subquery.
-Query 5:
+
+Write a query to obtain the cust_ID and customer_name for all customers residing on the same street and in the same city as customer '12345'. Include customer '12345' in the results. Avoid hardcoding the address for customer '12345' as their information might change. Your solution must include a subquery.
 
